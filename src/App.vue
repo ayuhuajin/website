@@ -1,9 +1,10 @@
 <template>
-  <p @click="getExposeData">expose</p>
+  <!-- <p @click="getExposeData">expose</p>
   <PartOne ref="child" msg="partOne" @up-data="UpData"></PartOne>
   <PartTwo msg="PartTwo" />
   <Practice></Practice>
-  <el-button>地方手动阀手动阀</el-button>
+  <el-button>地方手动阀手动阀</el-button> -->
+  <routerView></routerView>
 </template>
 
 <script setup lang="ts">
@@ -31,8 +32,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

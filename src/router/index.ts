@@ -1,71 +1,50 @@
 import { createRouter,createWebHistory  } from "vue-router";
 
-const home = () => import("../views/home.vue")
-const login = () => import("../views/login.vue")
+const HomeIndex = () => import("../views/frontEnd/HomeIndex.vue")
+const AdminIndex = () => import("../views/backend/AdminIndex.vue")
+const PracticeIndex = () => import("../views/practice/PracticeIndex.vue")
 
 const routes = [
   { path: "/", redirect: "/home" },
   {
     path: "/home",
     name: "home",
-    component: home
+    component: HomeIndex
   },
   {
-    path: "/login",
-    name: "login",
-    component: login
+    path: "/backend",
+    name: "AdminIndex",
+    component: AdminIndex,
+    children:[
+      {
+        path: '/backend',
+        component: () => import('../views/backend/TestDemo.vue'),
+      },
+      {
+        path: '/backend/VueDemo',
+        component: () => import('../views/backend/VueDemo.vue'),
+      },
+    ]
   },
   {
-    path: "/test",
-    name: "test",
-    component: ()=>import('../views/test.vue')
-  },
-  {
-    path: "/crud",
-    name: "crud",
-    component: ()=>import('../views/crud.vue')
-  },
-  {
-    path: "/demo",
-    name: "demo",
-    component: () => import('../views/demo/DemoVue.vue'),
-    children: [
+    path: "/practice",
+    name: "PracticeIndex",
+    component: PracticeIndex,
+    children:[
       {
-        path: "/demo1",
-        name: "demo1",
-        component: () => import('../views/demo/demo1.vue')
+        path: '/practice',
+        component: () => import('../views/practice/paractice1.vue'),
       },
       {
-        path: "/demo2",
-        name: "demo2",
-        component: () => import('../views/demo/demo2.vue')
+        path: '/backend/VueDemo',
+        component: () => import('../views/practice/paractice2.vue'),
       },
-      {
-        path: "/demo3",
-        name: "demo3",
-        component: () => import('../views/demo/demo3.vue')
-      },
-      {
-        path: "/demo4",
-        name: "demo4",
-        component: () => import('../views/demo/demo4.vue')
-      },
-      {
-        path: "/vuex",
-        name: "vuex",
-        component: () => import('../views/demo/vuex.vue')
-      },
-      {
-        path: "/axios",
-        name: "axios",
-        component: () => import('../views/demo/axios.vue')
-      }
     ]
   },
   {// 404路由
     path: '/404',
     name: '404',
-    component: ()=>import('../views/404.vue')
+    component: ()=>import('../views/common/404.vue')
   },
   {// 404路由  需正则表达式配置
     path: '/:pathMatch(.*)*',

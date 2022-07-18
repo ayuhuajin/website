@@ -2,10 +2,10 @@
   <p>{{ msg }}</p>
 </template>
 
-<script setup lang="ts" setup>
+<script setup lang="ts">
   import { reactive, ref } from 'vue';
 
-  let msg = ref("ceshi")
+  let msg = ref("vueDemo")
 </script>
 
 <style lang="scss" scoped>
