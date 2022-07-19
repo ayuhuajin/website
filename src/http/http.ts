@@ -5,7 +5,10 @@
 
 import axios from 'axios'
 // 全局的axios默认值
-axios.defaults.baseURL = 'http://192.168.42.2:3000';
+const URL = import.meta.env.VITE_APP_URL
+console.log(URL,"VITE_APP_URL");
+
+axios.defaults.baseURL = URL;
 axios.defaults.headers['Content-Type'] = 'application/json';
 
 // 超时设置

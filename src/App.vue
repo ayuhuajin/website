@@ -14,10 +14,7 @@
   import Practice from './components/Practice.vue'
   import practiceData from './hooks/practice.js'
   let data = practiceData()
-  console.log(data,8989);
-  
   const child = ref()
-
   const UpData = (item:String)=>{
     console.log("获取子组件数据",item)
   }

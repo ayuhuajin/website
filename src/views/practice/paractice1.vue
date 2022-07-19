@@ -6,7 +6,9 @@
 
 <script setup lang="ts">
   import { reactive, ref } from 'vue';
+  import {getList } from '@/api/shop.ts'
   // import cat from '@/assets/cat.png'
+  let a = getList({})
   let msg = ref("paractice1")
   let cat = ref('cat')
 </script>

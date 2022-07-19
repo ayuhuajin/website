@@ -56,7 +56,7 @@ const router = createRouter({
   routes: routes
 })
 router.beforeEach((to, from) => {
-  console.log(to, from,'路由守卫');
+  // console.log(to, from,'路由守卫');
   // return false
 })
 export default router;   
