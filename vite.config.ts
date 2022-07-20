@@ -11,6 +11,7 @@ export default ({mode})=>{
     server: {
       port: 7788
     },
+    base: './',
     plugins: [
       vue({
         // refTransform: true // 开启ref转换
