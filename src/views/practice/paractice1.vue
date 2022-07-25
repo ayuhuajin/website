@@ -26,7 +26,7 @@
 
 <style lang="scss" scoped>
 p{
-  color: red;
+  color: #999;
 }
 img{
   width: 20px;

@@ -12,7 +12,7 @@
   import PartOne from './components/PartOne.vue'
   import PartTwo from './components/PartTwo.vue'
   import Practice from './components/Practice.vue'
-  import practiceData from './hooks/practice.js'
+  import practiceData from './hooks/practice'
   let data = practiceData()
   const child = ref()
   const UpData = (item:String)=>{

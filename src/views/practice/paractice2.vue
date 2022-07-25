@@ -9,6 +9,6 @@
 
 <style lang="scss" scoped>
 p{
-  color: red;
+  color: #999;
 }
 </style>
