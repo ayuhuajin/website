@@ -1,5 +1,7 @@
 <template>
-  <p>{{msg}}</p>
+  <p>
+    watch
+  </p>
 </template>
 
 <script setup lang="ts">

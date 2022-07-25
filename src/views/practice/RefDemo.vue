@@ -2,13 +2,21 @@
   <p>{{msg}}</p>
 </template>
 
-<script setup lang="ts">
-  import {ref } from 'vue';
-  let msg = ref("demo")
-</script>
-
-<style lang="scss" scoped>
-p{
-  color: #999;
+<script lang="ts" setup>
+import { ref,reactive,onMounted,onBeforeMount } from "vue";
+let msg = ref('hello world')
+let obj = reactive({
+    name:'juejin',
+    age:3
+})
+const changeData = () => {
+  msg.value = 'hello juejin'
+  obj.name = 'hello world'
 }
-</style>
+onBeforeMount(()=>{
+    console.log('DOM挂载前调用')
+  })
+  onMounted(()=>{
+    console.log('DOM挂载完成调用')
+  })
+</script>
