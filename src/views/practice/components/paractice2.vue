@@ -1,12 +1,14 @@
 <template>
-  <base-header></base-header>
+  <p>{{msg}}</p>
 </template>
 
 <script setup lang="ts">
   import { reactive, ref } from 'vue';
-  import BaseHeader from "@/components/BaseHeader.vue"
-  let msg = ref("paractice hom")
+  let msg = ref("paractice2")
 </script>
 
 <style lang="scss" scoped>
+p{
+  color: red;
+}
 </style>
