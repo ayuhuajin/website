@@ -76,13 +76,6 @@ import demo7 from '@/views/practice/LifeStyle.vue'
       label:"生命周期",
     }
   ])
-
-  onActivated(() => {
-    console.log('当keep-alive包裹的组件激活时调用')
-  })
-  onDeactivated(() => {
-    console.log('当keep-alive包裹的组件停用时调用')
-  })
   onErrorCaptured(() => {
     console.log('后代组件发生错误时触发')
   })
@@ -94,8 +87,6 @@ import demo7 from '@/views/practice/LifeStyle.vue'
   })
 
   function handleClick(tab: any, event: any) {
-    console.log(activeName.value,8989);
-    
     switch(tab.paneName) {
       case 'demo1':
         currentComp.value = demo1;
@@ -119,7 +110,6 @@ import demo7 from '@/views/practice/LifeStyle.vue'
         currentComp.value = demo7;
         break;
     }
-    console.log(tab.paneName, event);
   }
 </script>
 <style lang="scss" scoped>

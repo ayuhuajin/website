@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-  import {ref,onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onBeforeUnmount,onUnmounted} from 'vue';
+  import {ref,onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onBeforeUnmount,onUnmounted,onActivated,onDeactivated} from 'vue';
   let msg = ref("demo")
   onBeforeMount(()=>{
     console.log('DOM挂载前调用')
@@ -22,6 +22,12 @@
   })
   onUnmounted(()=>{
     console.log('组件销毁完成调用')
+  })
+   onActivated(() => {
+    console.log('当keep-alive包裹的组件激活时调用')
+  })
+  onDeactivated(() => {
+    console.log('当keep-alive包裹的组件停用时调用')
   })
 </script>
 
